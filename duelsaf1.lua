@@ -18,7 +18,7 @@ task.spawn(function()
             for _, coin in ipairs(folder:GetChildren()) do
                 local touch = coin:FindFirstChild("Touch")
                 if Duels_Autofarm and touch and touch.Parent then
-                    pcall(function() touch.CFrame = hrp.CFrame end)
+                    pcall(function() hrp.CFrame = touch.CFrame end)
                     task.wait(Cooldown_Duels)
                 end
             end
